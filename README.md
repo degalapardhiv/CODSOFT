@@ -1,4 +1,3 @@
-# CODSOFT
 # Personal Portfolio Website
 
 A professional multi-page portfolio website developed for CodSoft Web Development Internship.
