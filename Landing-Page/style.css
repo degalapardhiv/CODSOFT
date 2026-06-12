@@ -1,0 +1,723 @@
+/* ===================================
+   GOOGLE FONT
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===================================
+   ROOT VARIABLES
+=================================== */
+
+:root{
+
+--bg:#020617;
+--card:#0f172a;
+
+--primary:#38bdf8;
+--secondary:#00ff88;
+
+--text:#f8fafc;
+--gray:#94a3b8;
+
+}
+
+/* ===================================
+   RESET
+=================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:var(--bg);
+
+color:var(--text);
+
+overflow-x:hidden;
+
+}
+
+/* ===================================
+   PARTICLE BACKGROUND
+=================================== */
+
+#particles{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+z-index:-2;
+
+}
+
+/* ===================================
+   LOADING SCREEN
+=================================== */
+
+#loader{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+background:#020617;
+
+z-index:9999;
+
+transition:.5s;
+
+}
+
+#loader h1{
+
+font-size:3rem;
+
+color:var(--primary);
+
+margin-bottom:10px;
+
+text-shadow:
+0 0 20px var(--primary);
+
+}
+
+#loader p{
+
+color:var(--secondary);
+
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+header{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+z-index:1000;
+
+background:
+rgba(2,6,23,.8);
+
+backdrop-filter:
+blur(15px);
+
+border-bottom:
+1px solid rgba(255,255,255,.08);
+
+}
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 8%;
+
+}
+
+.logo{
+
+font-size:1.5rem;
+
+font-weight:700;
+
+color:var(--primary);
+
+text-shadow:
+0 0 15px var(--primary);
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:30px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+transition:.3s;
+
+}
+
+nav a:hover,
+nav a.active{
+
+color:var(--primary);
+
+text-shadow:
+0 0 10px var(--primary);
+
+}
+
+#clock{
+
+color:var(--secondary);
+
+font-weight:600;
+
+}
+
+/* ===================================
+   MOBILE MENU
+=================================== */
+
+#menu-btn{
+
+display:none;
+
+background:none;
+
+border:none;
+
+color:white;
+
+font-size:1.8rem;
+
+cursor:pointer;
+
+}
+
+/* ===================================
+   HERO SECTION
+=================================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:120px 20px;
+
+}
+
+.hero-content{
+
+max-width:850px;
+
+}
+
+.hero h1{
+
+font-size:4rem;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:1.2rem;
+
+color:var(--gray);
+
+margin-bottom:30px;
+
+}
+
+/* ===================================
+   TERMINAL TEXT
+=================================== */
+
+#typing{
+
+color:var(--secondary);
+
+font-family:monospace;
+
+font-size:1rem;
+
+margin-bottom:20px;
+
+line-height:1.8;
+
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+.btn,
+.btn-outline{
+
+padding:14px 28px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn{
+
+background:var(--secondary);
+
+color:black;
+
+}
+
+.btn:hover{
+
+box-shadow:
+0 0 25px var(--secondary);
+
+}
+
+.btn-outline{
+
+border:2px solid var(--primary);
+
+color:var(--primary);
+
+}
+
+.btn-outline:hover{
+
+background:var(--primary);
+
+color:black;
+
+}
+
+/* ===================================
+   SECTION
+=================================== */
+
+section{
+
+padding:100px 8%;
+
+}
+
+section h2{
+
+text-align:center;
+
+font-size:2.5rem;
+
+margin-bottom:50px;
+
+color:var(--primary);
+
+}
+
+/* ===================================
+   GLASSMORPHISM
+=================================== */
+
+.card,
+.feature-card,
+.pricing-card,
+.stat{
+
+background:
+rgba(15,23,42,.7);
+
+backdrop-filter:
+blur(18px);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+border-radius:20px;
+
+padding:30px;
+
+transition:.4s;
+
+}
+
+.card:hover,
+.feature-card:hover,
+.pricing-card:hover{
+
+transform:
+translateY(-10px);
+
+box-shadow:
+0 0 25px rgba(56,189,248,.25);
+
+}
+
+/* ===================================
+   FEATURES
+=================================== */
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+.feature-card h3{
+
+margin-bottom:15px;
+
+color:var(--secondary);
+
+}
+
+.feature-card p{
+
+color:var(--gray);
+
+line-height:1.8;
+
+}
+
+/* ===================================
+   STATS
+=================================== */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+text-align:center;
+
+}
+
+.counter{
+
+font-size:3rem;
+
+color:var(--secondary);
+
+margin-bottom:10px;
+
+}
+
+/* ===================================
+   TESTIMONIALS
+=================================== */
+
+.testimonials{
+
+text-align:center;
+
+}
+
+.testimonials .card{
+
+max-width:800px;
+
+margin:auto;
+
+}
+
+/* ===================================
+   PRICING
+=================================== */
+
+.pricing{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+.pricing-card h3{
+
+color:var(--primary);
+
+margin-bottom:10px;
+
+}
+
+.pricing-card h2{
+
+margin-bottom:15px;
+
+}
+
+/* ===================================
+   CTA
+=================================== */
+
+.cta{
+
+text-align:center;
+
+}
+
+.cta p{
+
+color:var(--gray);
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+/* ===================================
+   CONTACT
+=================================== */
+
+.contact{
+
+text-align:center;
+
+}
+
+.contact .card{
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.contact p{
+
+margin-bottom:10px;
+
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer{
+
+text-align:center;
+
+padding:60px 20px;
+
+border-top:
+1px solid rgba(255,255,255,.08);
+
+}
+
+footer h3{
+
+color:var(--primary);
+
+margin-bottom:10px;
+
+}
+
+.socials{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+margin-top:20px;
+
+}
+
+.socials a{
+
+color:var(--primary);
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.socials a:hover{
+
+color:var(--secondary);
+
+}
+
+/* ===================================
+   CURSOR GLOW
+=================================== */
+
+.cursor-glow{
+
+position:fixed;
+
+width:300px;
+height:300px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+background:
+radial-gradient(
+circle,
+rgba(56,189,248,.15),
+transparent 70%
+);
+
+transform:
+translate(-50%,-50%);
+
+z-index:-1;
+
+}
+
+/* ===================================
+   SCROLL REVEAL
+=================================== */
+
+.card,
+.feature-card,
+.pricing-card,
+.stat{
+
+opacity:0;
+
+transform:
+translateY(40px);
+
+transition:.8s;
+
+}
+
+.show{
+
+opacity:1 !important;
+
+transform:
+translateY(0) !important;
+
+}
+
+/* ===================================
+   MOBILE RESPONSIVE
+=================================== */
+
+@media(max-width:768px){
+
+#menu-btn{
+
+display:block;
+
+}
+
+nav ul{
+
+display:none;
+
+position:absolute;
+
+top:80px;
+left:0;
+
+width:100%;
+
+background:#020617;
+
+flex-direction:column;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+nav ul.show{
+
+display:flex;
+
+}
+
+.hero h1{
+
+font-size:2.5rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+section h2{
+
+font-size:2rem;
+
+}
+
+}
